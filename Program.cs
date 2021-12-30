@@ -76,13 +76,26 @@ namespace mini_app
                     } else if(docOption == 1)
                     {
                         Console.WriteLine("Please enter values in a format separated by commas");
-                        string[] names = new string[] { Console.ReadLine() };
+                        string[] names = new string[] { Console.ReadLine() + "\n" };
 
                         using (StreamWriter sw = new StreamWriter("c:/nottingham/nurse_roster.txt"))
                         {
                             foreach (string s in names)
                             {
                                 sw.WriteLine(s);
+                            }
+                        }
+
+                        //show the Doctor the updated nurse roster
+                        
+                        string line;
+                        using (StreamReader sr = new StreamReader("c:/nottingham/nurse_roster.txt"))
+                        {
+                            //string line;
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                //sr.WriteLine(line);
+                                Console.WriteLine(line);
                             }
                         }
                     }else
