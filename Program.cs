@@ -65,9 +65,13 @@ namespace mini_app
                         }
                     } else if(docOption == 3)
                     {
-                        using (StreamReader sr = new StreamReader("c:/nottingham/patients_list.txt"))
+                        using (StreamReader sr = new StreamReader("c:/nottingham/patient_list.txt"))
                         {
-
+                            string line;
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                Console.WriteLine(line);
+                            }
                         }
                     }
                 }
