@@ -87,7 +87,7 @@ namespace mini_app
                         }
 
                         //show the Doctor the updated nurse roster
-                        
+                        Console.WriteLine("Nurse roster updated successfully, please view the updated list below :)");
                         string line;
                         using (StreamReader sr = new StreamReader("c:/nottingham/nurse_roster.txt"))
                         {
