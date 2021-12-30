@@ -73,6 +73,21 @@ namespace mini_app
                                 Console.WriteLine(line);
                             }
                         }
+                    } else if(docOption == 1)
+                    {
+                        Console.WriteLine("Please enter values in a format separated by commas");
+                        string[] names = new string[] { Console.ReadLine() };
+
+                        using (StreamWriter sw = new StreamWriter("c:/nottingham/nurse_roster.txt"))
+                        {
+                            foreach (string s in names)
+                            {
+                                sw.WriteLine(s);
+                            }
+                        }
+                    }else
+                    {
+                        Console.WriteLine("Please enter an input between 1 - 3, please try again! :)");
                     }
                 }
                     catch (Exception e)
