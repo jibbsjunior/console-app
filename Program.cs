@@ -52,6 +52,24 @@ namespace mini_app
                             Console.WriteLine(line);
                         }
                     }
+                    int docOption = Convert.ToInt32(Console.ReadLine());
+                    if(docOption == 2)
+                    {
+                        using (StreamReader sr = new StreamReader("c:/nottingham/nurse_roster.txt"))
+                        {
+                            string line;
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                Console.WriteLine(line);
+                            }
+                        }
+                    } else if(docOption == 3)
+                    {
+                        using (StreamReader sr = new StreamReader("c:/nottingham/patients_list.txt"))
+                        {
+
+                        }
+                    }
                 }
                     catch (Exception e)
                     {
@@ -88,7 +106,7 @@ namespace mini_app
                     Console.ReadKey();
             }else
             {
-                Console.WriteLine("You have select a wrong input, we stongly advise you to try again! :)");
+                Console.WriteLine("You have enter a wrong input, we stongly advise you to try again! :)");
             }
         }
     }
