@@ -35,7 +35,7 @@ namespace mini_app
             //int option;
             Console.WriteLine("Please select an option from above!");
             int option = Convert.ToInt32(Console.ReadLine());
-            if (option == 1 && option is int)
+            if (option == 1)
             {
                 try
                 {
@@ -51,6 +51,21 @@ namespace mini_app
                         {
                             Console.WriteLine(line);
                         }
+                    }
+
+                    int registered_doctor = Convert.ToInt32(Console.ReadLine());
+
+                    using (StreamReader sr = new StreamReader("c:/nottingham/registered_doctor.txt"))
+                    {
+                        string line = sr.ReadLine();
+                        if (!line.Contains(Convert.ToString(registered_doctor)))
+                        {
+                            Console.WriteLine("You're not a registered doctor, please try again!");
+                        }
+                        //while ((line = sr.ReadLine()) != null)
+                        //{
+                        //    Console.WriteLine(line);
+                        //}
                     }
                     int docOption = Convert.ToInt32(Console.ReadLine());
                     if(docOption == 2)
